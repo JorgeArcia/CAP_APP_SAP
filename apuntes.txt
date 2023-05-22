@@ -1,0 +1,21 @@
+-Para crear un proyecto CAP (desde 0)
+
+
+	*Por consola: cds init XXX <-- Nombre del proyecto
+
+
+	*Por la interface: Create new project from template --> select CAP PROJECT --> y se deja todo basico.
+
+---------------------------------------------------------
+|	`app/` | content for UI frontends goes here	|
+|	`db/` | your domain models and data go here	|
+|	`srv/` | your service models and code go here	|
+---------------------------------------------------------
+
+El modelo sera como nuestra DB y la vamos a modularizar, una vez modularizada la podremos importar para los servicios
+
+Lo que este en la carpeta SRV seran los servicios publicados.
+
+En DB crearemos las entidades y luego las exponemos en SRV.
+
+
