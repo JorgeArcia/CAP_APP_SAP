@@ -18,4 +18,52 @@ Lo que este en la carpeta SRV seran los servicios publicados.
 
 En DB crearemos las entidades y luego las exponemos en SRV.
 
+*Entidad Adstracta es una entidad que no se va a representar al nivel de DB o a nivel de capa de persistencia.
+
+Se pueden generar variables o tipos de datos custom, utilizando el 
+	Define type xxx : string(50);
+
+
+Se pueden utilizar tipos estructurados definiendo como arriba
+
+	Define type adress {
+		name : string;
+		fecha	: datetime;
+	};
+Lo trabajamos como si fuera un objeto.
+
+
+
+Se pueden utilizar tipo Matriz
+
+Type EmailsAddress : many/array of {
+	kind	:	string;
+	email	: string;
+}
+y lo consumimos como los datos tipo estructurados.
+
+
+*Enumerados
+type xxxx : string enum {
+	male;
+	famale;
+};
+
+
+Para tipos de datos DateTime si queremos la fecha actual (sy-datum)
+usaremos despues de la declaracion en la entidad 
+
+	ReleaseDate : DateTime default $now;
+
+Para datos tipo string
+
+	Name : String default 'NoName';
+
+
+******* Para mirar los scripts SQL que tenemos en el schema ********
+
+en consola ----> cds db/schema.cds -2
+
+
+
 
