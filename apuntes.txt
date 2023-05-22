@@ -64,6 +64,13 @@ Para datos tipo string
 
 en consola ----> cds db/schema.cds -2
 
+Para agregar propidades a las entidades y que estas no persistan en las tablas en la base de datos
+utilizaremos la palabra reservada virtual antes de declarala.
+De esta manera no se podran editar o cambiar dichos datos por ejemplo una variable que virtual no le podremos hacer un post.
+Para poder enviar o escribir un dato virtual tendremos que usar la annotation '@core.computed : false'.
+
+
+
 
 
 
